@@ -113,7 +113,12 @@ module.exports = {
       // but on Google Assistant it would be The Internet Archive Action
       speech:
         '<s>{{platform.appName}} can not help with that.</s> ' +
-        '<s>{{last.reprompt}}</s>'
+        '<s>Oops! You are still in Internet Archive Service. Do you want to continue?</s>' +
+        '<s>{{last.reprompt}}</s>',
+    },
+
+    fallback_yes: {
+      speech: '<s> repeat the question or continue playback </s>',
     },
 
     getFSMState: {
